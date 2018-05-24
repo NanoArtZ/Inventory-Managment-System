@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<!-- saved from url=(0198)http://127.0.0.1/phpmyadmin/db_structure.php?server=1&db=seldo&token=61fc54b4cc33165c220c552dde0fec2b#PMAURL-1:pmd_general.php?db=seldo&table=&server=1&target=&token=61fc54b4cc33165c220c552dde0fec2b -->
+<html lang="en" dir="ltr" class="chrome chrome61"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="robots" content="noindex,nofollow"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="icon" href="http://127.0.0.1/phpmyadmin/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="http://127.0.0.1/phpmyadmin/favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" href="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/phpmyadmin.css.php"><link rel="stylesheet" type="text/css" href="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/jquery-ui-1.9.2.custom.css"><title>127.0.0.1 / 127.0.0.1 / seldo | phpMyAdmin 4.2.7.1</title><script type="text/javascript" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/get_scripts.js.php"></script><script type="text/javascript" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/messages.php"></script><script type="text/javascript" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/get_image.js.php"></script><script type="text/javascript">// <![CDATA[
+PMA_commonParams.setAll({common_query:"token=61fc54b4cc33165c220c552dde0fec2b",opendb_url:"db_structure.php",safari_browser:"0",querywindow_height:"400",querywindow_width:"600",collation_connection:"utf8mb4_general_ci",lang:"en",server:"1",table:"",db:"seldo",token:"61fc54b4cc33165c220c552dde0fec2b",text_dir:"ltr",pma_absolute_uri:"http://127.0.0.1/phpmyadmin/",pma_text_default_tab:"Browse",pma_text_left_default_tab:"Structure",confirm:"1"});
+AJAX.scriptHandler.add("jquery/jquery-1.8.3.min.js",0).add("ajax.js",0).add("keyhandler.js",1).add("jquery/jquery-ui-1.9.2.custom.min.js",0).add("jquery/jquery.sprintf.js",0).add("jquery/jquery.cookie.js",0).add("jquery/jquery.mousewheel.js",0).add("jquery/jquery.event.drag-2.2.js",0).add("jquery/jquery-ui-timepicker-addon.js",0).add("jquery/jquery.ba-hashchange-1.3.js",0).add("jquery/jquery.debounce-1.0.5.js",0).add("jquery/jquery.menuResizer-1.0.js",0).add("cross_framing_protection.js",0).add("rte.js",1).add("tracekit/tracekit.js",1).add("error_report.js",1).add("messages.php?lang=en&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b",0).add("get_image.js.php?theme=pmahomme",0).add("doclinks.js",1).add("functions.js",1).add("navigation.js",0).add("indexes.js",1).add("common.js",1).add("db_structure.js",1).add("tbl_change.js",1).add("codemirror/lib/codemirror.js",0).add("codemirror/mode/sql/sql.js",0).add("codemirror/addon/runmode/runmode.js",0);
+$(function() {AJAX.fireOnload("keyhandler.js");AJAX.fireOnload("rte.js");AJAX.fireOnload("tracekit/tracekit.js");AJAX.fireOnload("error_report.js");AJAX.fireOnload("doclinks.js");AJAX.fireOnload("functions.js");AJAX.fireOnload("indexes.js");AJAX.fireOnload("common.js");AJAX.fireOnload("db_structure.js");AJAX.fireOnload("tbl_change.js");});
+// ]]></script><script type="text/javascript" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/get_scripts.js(1).php"></script></head><body style="padding-top: 59px;"><div id="pma_navigation"><div id="pma_navigation_resizer"></div><div id="pma_navigation_collapser">←</div><div id="pma_navigation_content"><div id="pma_navigation_header"><a class="hide navigation_url" href="http://127.0.0.1/phpmyadmin/navigation.php?ajax_request=1&amp;token=61fc54b4cc33165c220c552dde0fec2b"></a><!-- LOGO START --><div id="pmalogo">    <a href="http://127.0.0.1/phpmyadmin/index.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b&amp;goto=db_structure.php"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/logo_left.png" alt="phpMyAdmin" id="imgpmalogo"></a></div><!-- LOGO END --><!-- LINKS START --><div id="navipanellinks"><a href="http://127.0.0.1/phpmyadmin/index.php?token=61fc54b4cc33165c220c552dde0fec2b" title="Home"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Home" alt="Home" class="icon ic_b_home"></a><a href="http://127.0.0.1/phpmyadmin/index.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b&amp;goto=db_structure.php&amp;old_usr=root" class="disableAjax" title="Log out"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Log out" alt="Log out" class="icon ic_s_loggoff"></a><a href="http://127.0.0.1/phpmyadmin/querywindow.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b&amp;no_js=true" id="pma_open_querywindow" class="disableAjax" title="Query window"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Query window" alt="Query window" class="icon ic_b_selboard"></a><a href="http://127.0.0.1/phpmyadmin/doc/html/index.html" target="documentation" title="phpMyAdmin documentation"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="phpMyAdmin documentation" alt="phpMyAdmin documentation" class="icon ic_b_docs"></a><a href="http://127.0.0.1/phpmyadmin/url.php?url=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.6%2Fen%2Findex.html" target="mysql_doc"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_sqlhelp"></a><a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" id="pma_navigation_reload" title="Reload navigation panel"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Reload navigation panel" alt="Reload navigation panel" class="icon ic_s_reload"></a></div><!-- LINKS ENDS --><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/ajax_clock_small.gif" title="Loading…" alt="Loading…" style="visibility: hidden; display:none" class="throbber"></div><div id="pma_navigation_tree" class="list_container highlight" style="height: 541px;"><div id="pma_quick_warp"><div class="drop_list"><span title="Recent tables" class="drop_button">Recent</span><ul id="pma_recent_list"><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=asankafurnituredb&amp;table=instalments&amp;token=61fc54b4cc33165c220c552dde0fec2b">`asankafurnituredb`.`instalments`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=payment&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`payment`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=sale&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`sale`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=invoice&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`invoice`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=finisheditem&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`finisheditem`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=customer&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`customer`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=cheque&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`cheque`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=sale_has_finance&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`sale_has_finance`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=payment_has_cheque&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`payment_has_cheque`</a></li><li class="warp_link"><a href="http://127.0.0.1/phpmyadmin/sql.php?db=seldo&amp;table=rawitem&amp;token=61fc54b4cc33165c220c552dde0fec2b">`seldo`.`rawitem`</a></li></ul></div><div class="drop_list"><span title="Favorite tables" class="drop_button">Favorites</span><ul id="pma_favorite_list"><li class="warp_link">There are no favorite tables.</li></ul></div><div class="clearfloat"></div></div><div class="clearfloat"></div><div id="pma_navigation_tree_content" style="height: 517px;"><ul><li class="first new_database italics"><div class="block"><i class="first"></i></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/server_databases.php?server=1&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="" alt="" class="icon ic_b_newdb"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/server_databases.php?server=1&amp;token=61fc54b4cc33165c220c552dde0fec2b">New</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.YXNhbmthZnVybml0dXJlZGI=</span><span class="hide vPath">cm9vdA==.YXNhbmthZnVybml0dXJlZGI=</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=asankafurnituredb&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=asankafurnituredb&amp;token=61fc54b4cc33165c220c552dde0fec2b">asankafurnituredb</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.Y2Rjb2w=</span><span class="hide vPath">cm9vdA==.Y2Rjb2w=</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=cdcol&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=cdcol&amp;token=61fc54b4cc33165c220c552dde0fec2b">cdcol</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class="hide vPath">cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=information_schema&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=information_schema&amp;token=61fc54b4cc33165c220c552dde0fec2b">information_schema</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.bXlzcWw=</span><span class="hide vPath">cm9vdA==.bXlzcWw=</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=mysql&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=mysql&amp;token=61fc54b4cc33165c220c552dde0fec2b">mysql</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class="hide vPath">cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=performance_schema&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=performance_schema&amp;token=61fc54b4cc33165c220c552dde0fec2b">performance_schema</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.cGhwbXlhZG1pbg==</span><span class="hide vPath">cm9vdA==.cGhwbXlhZG1pbg==</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=phpmyadmin&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=phpmyadmin&amp;token=61fc54b4cc33165c220c552dde0fec2b">phpmyadmin</a><div class="clearfloat"></div></li><li class="database selected"><div class="block"><i></i><b></b><a class="expander loaded" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=</span><span class="hide vPath">cm9vdA==.c2VsZG8=</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_minus" style="display: inline;"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b">seldo</a><div class="clearfloat"></div><div class="list_container" style=""><ul><li class="new_table italics"><div class="block"><i></i><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_create.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="New" alt="New" class="icon ic_b_table_add"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/tbl_create.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b">New</a><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.YnJhbmNo</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.YnJhbmNo</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=branch&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=branch&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">branch</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=branch&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.Y2hlcXVl</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.Y2hlcXVl</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=cheque&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=cheque&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">cheque</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=cheque&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.Y3VzdG9tZXI=</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.Y3VzdG9tZXI=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=customer&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=customer&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">customer</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=customer&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.ZW1wbG95ZWU=</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.ZW1wbG95ZWU=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=employee&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=employee&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">employee</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=employee&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.ZmluYW5jZQ==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.ZmluYW5jZQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=finance&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=finance&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">finance</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=finance&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.ZmluaXNoZWRpdGVt</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.ZmluaXNoZWRpdGVt</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=finisheditem&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=finisheditem&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">finisheditem</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=finisheditem&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.Z3Ju</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.Z3Ju</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=grn&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=grn&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">grn</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=grn&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.aW52b2ljZQ==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.aW52b2ljZQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=invoice&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=invoice&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">invoice</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=invoice&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.aXRlbV9oYXNfc2FsZQ==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.aXRlbV9oYXNfc2FsZQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=item_has_sale&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=item_has_sale&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">item_has_sale</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=item_has_sale&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.cGF5bWVudA==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.cGF5bWVudA==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=payment&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=payment&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">payment</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=payment&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.cGF5bWVudF9oYXNfY2hlcXVl</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.cGF5bWVudF9oYXNfY2hlcXVl</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=payment_has_cheque&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=payment_has_cheque&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">payment_has_cheque</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=payment_has_cheque&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.cmF3aXRlbQ==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.cmF3aXRlbQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=rawitem&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=rawitem&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">rawitem</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=rawitem&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.c2FsZQ==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.c2FsZQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=sale&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=sale&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">sale</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=sale&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.c2FsZV9oYXNfZmluYW5jZQ==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.c2FsZV9oYXNfZmluYW5jZQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=sale_has_finance&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=sale_has_finance&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">sale_has_finance</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=sale_has_finance&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.c3VwcGxpZXI=</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.c3VwcGxpZXI=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=supplier&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=supplier&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">supplier</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=supplier&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="table"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.dXNlcmFjY291bnQ=</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.dXNlcmFjY291bnQ=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=useraccount&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=useraccount&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">useraccount</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=useraccount&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li><li class="last table"><div class="block"><i></i><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG8=.dGFibGVz.dmVoaWNsZWRldGFpbA==</span><span class="hide vPath">cm9vdA==.c2VsZG8=.VGFibGVz.dmVoaWNsZWRldGFpbA==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/tbl_structure.php?server=1&amp;db=seldo&amp;table=vehicledetail&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/sql.php?server=1&amp;db=seldo&amp;table=vehicledetail&amp;pos=0&amp;token=61fc54b4cc33165c220c552dde0fec2b">vehicledetail</a><span class="navItemControls"><a href="http://127.0.0.1/phpmyadmin/navigation.php?token=61fc54b4cc33165c220c552dde0fec2b&amp;hideNavItem=true&amp;itemType=table&amp;itemName=vehicledetail&amp;dbName=seldo" class="hideNavItem ajax"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Hide" alt="Hide" class="icon ic_lightbulb_off"></a></span><div class="clearfloat"></div></li></ul></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.c2VsZG9kYg==</span><span class="hide vPath">cm9vdA==.c2VsZG9kYg==</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=seldodb&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldodb&amp;token=61fc54b4cc33165c220c552dde0fec2b">seldodb</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.dGVzdA==</span><span class="hide vPath">cm9vdA==.dGVzdA==</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=test&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=test&amp;token=61fc54b4cc33165c220c552dde0fec2b">test</a><div class="clearfloat"></div></li><li class="last database"><div class="block"><i></i><a class="expander" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#"><span class="hide aPath">cm9vdA==.d2ViYXV0aA==</span><span class="hide vPath">cm9vdA==.d2ViYXV0aA==</span><span class="hide pos">0</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block"><a href="http://127.0.0.1/phpmyadmin/db_operations.php?server=1&amp;db=webauth&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=webauth&amp;token=61fc54b4cc33165c220c552dde0fec2b">webauth</a><div class="clearfloat"></div></li></ul></div></div></div></div><div id="floating_menubar" style="margin-left: 243px; left: 0px; position: fixed; top: 0px; width: 100%; z-index: 500;"><div id="serverinfo"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="" alt="" class="icon ic_s_host item"><a href="http://127.0.0.1/phpmyadmin/index.php?token=61fc54b4cc33165c220c552dde0fec2b" class="item">Server: 127.0.0.1</a><span class="separator item">&nbsp;»</span><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="" alt="" class="icon ic_s_db item"><a href="http://127.0.0.1/phpmyadmin/db_structure.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b" class="item">Database: seldo</a><div class="clearfloat"></div></div><div id="topmenucontainer" class="menucontainer"><ul id="topmenu" class="resizable-menu"><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_structure.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props"> Structure</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_sql.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql"> SQL</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_search.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Search" alt="Search" class="icon ic_b_search"> Search</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_qbe.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Query" alt="Query" class="icon ic_s_db"> Query</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_export.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Export" alt="Export" class="icon ic_b_export"> Export</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_import.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Import" alt="Import" class="icon ic_b_import"> Import</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_operations.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Operations" alt="Operations" class="icon ic_b_tblops"> Operations</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/server_privileges.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b&amp;checkprivsdb=seldo&amp;viewing_mode=db"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Privileges" alt="Privileges" class="icon ic_s_rights"> Privileges</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_routines.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Routines" alt="Routines" class="icon ic_b_routines"> Routines</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_events.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Events" alt="Events" class="icon ic_b_events"> Events</a></li><li class="submenu shown active" style=""><a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" class="nowrap tabactive"><img alt="" title="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" class="icon ic_b_more">More</a><ul class="notonly"><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_triggers.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Triggers" alt="Triggers" class="icon ic_b_triggers"> Triggers</a></li><li><a class="tab" href="http://127.0.0.1/phpmyadmin/db_tracking.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Tracking" alt="Tracking" class="icon ic_eye"> Tracking</a></li><li class="active"><a class="tabactive" href="http://127.0.0.1/phpmyadmin/pmd_general.php?db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Designer" alt="Designer" class="icon ic_b_relations"> Designer</a></li></ul></li><div class="clearfloat"></div></ul>
+</div>
+</div>
+<a id="goto_pagetop" href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" title="Click on the bar to scroll to top of page"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="" alt="" class="icon ic_s_top"></a><div id="page_content" style="margin-left: 3px;"><div id="script_server" class="hide">1</div><div id="script_db" class="hide">seldo</div><div id="script_token" class="hide">61fc54b4cc33165c220c552dde0fec2b</div><div id="script_tables" class="hide">{"j_tabs":{"seldo.branch":1,"seldo.cheque":1,"seldo.customer":1,"seldo.employee":1,"seldo.finance":1,"seldo.finisheditem":1,"seldo.grn":1,"seldo.invoice":1,"seldo.item_has_sale":1,"seldo.payment":1,"seldo.payment_has_cheque":1,"seldo.rawitem":1,"seldo.sale":1,"seldo.sale_has_finance":1,"seldo.supplier":1,"seldo.useraccount":1,"seldo.vehicledetail":1},"h_tabs":{"seldo.branch":1,"seldo.cheque":1,"seldo.customer":1,"seldo.employee":1,"seldo.finance":1,"seldo.finisheditem":1,"seldo.grn":1,"seldo.invoice":1,"seldo.item_has_sale":1,"seldo.payment":1,"seldo.payment_has_cheque":1,"seldo.rawitem":1,"seldo.sale":1,"seldo.sale_has_finance":1,"seldo.supplier":1,"seldo.useraccount":1,"seldo.vehicledetail":1}}</div><div id="script_contr" class="hide">[{"":{"seldo.cheque":{"customer_CusID":["seldo.customer","CusID"]}}},{"":{"seldo.employee":{"branch_BraID":["seldo.branch","BraID"]}}},{"":{"seldo.employee":{"userAccount_UserName":["seldo.useraccount","UserName"]}}},{"":{"seldo.invoice":{"customer_CusID":["seldo.customer","CusID"]}}},{"":{"seldo.item_has_sale":{"item_ItemCode":["seldo.finisheditem","ItemCode"]}}},{"":{"seldo.payment":{"customer_CusID":["seldo.customer","CusID"]}}},{"":{"seldo.payment_has_cheque":{"cheque_ChequeNO":["seldo.cheque","ChequeNO"]}}},{"":{"seldo.rawitem":{"grn_grnNo":["seldo.grn","grnNo"]}}},{"":{"seldo.sale":{"branch_BraID":["seldo.branch","BraID"]}}},{"":{"seldo.sale":{"customer_CusID":["seldo.customer","CusID"]}}},{"":{"seldo.sale_has_finance":{"finance_AccountNo":["seldo.finance","AccountNo"]}}},{"":{"seldo.vehicledetail":{"branch_BraID":["seldo.branch","BraID"]}}}]</div><div id="script_display_field" class="hide">[]</div><div class="pmd_header" id="top_menu">
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Show_left_menu(document.getElementById(&#39;key_Show_left_menu&#39;)); return false" class="M_butt first" target="_self">
+        <img id="key_Show_left_menu" title="Show/Hide left menu" alt="v" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/downarrow2_m.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" id="enterFullscreen" onclick="Enter_fullscreen(); return false" class="M_butt" target="_self">
+        <img title="View in fullscreen" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/viewInFullscreen.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" id="exitFullscreen" onclick="Exit_fullscreen(); return false" class="M_butt hide" target="_self" style="display: none;">
+        <img title="Exit fullscreen" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exitFullscreen.png">
+    </a>
+    <img class="M_bord" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/bord.png" alt="">
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Save2(); return false" class="M_butt" target="_self">
+        <img title="Save position" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/save.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Start_table_new(); return false" class="M_butt" target="_self">
+        <img title="Create table" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/table.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Start_relation(); return false" class="M_butt" id="rel_button" target="_self">
+        <img title="Create relation" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/relation.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Start_display_field(); return false" class="M_butt" id="display_field_button" target="_self">
+        <img title="Choose column to display" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/display_field.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="location.reload(); return false" class="M_butt" target="_self">
+        <img title="Reload" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/reload.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/doc/html/faq.html#faq6-31" target="documentation" class="M_butt">
+        <img title="Help" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/help.png">
+    </a>
+    <img class="M_bord" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/bord.png" alt="">
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Angular_direct(); return false" class="M_butt" id="angular_direct_button" target="_self">
+        <img title="Angular links / Direct links" alt="" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/ang_direct.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Grid(); return false" class="M_butt" id="grid_button" target="_self">
+        <img title="Snap to grid" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/grid.png" alt="">
+    </a>
+    <img class="M_bord" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/bord.png" alt="">
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Small_tab_all(document.getElementById(&#39;key_SB_all&#39;)); return false" class="M_butt" target="_self">
+        <img id="key_SB_all" title="Small/Big All" alt="v" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/downarrow1.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Small_tab_invert(); return false" class="M_butt" target="_self">
+        <img title="Toggle small/big" alt="key" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/bottom.png">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Relation_lines_invert(); return false" class="M_butt" target="_self">
+        <img title="Toggle relation lines" alt="key" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/toggle_lines.png">
+    </a>
+    <img class="M_bord" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/bord.png" alt="">
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="PDF_save(); return false" class="M_butt ajax">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/pdf.png" alt="key" width="20" height="20" title="Import/Export coordinates for relational schema">
+    </a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Top_menu_right(document.getElementById(&#39;key_Left_Right&#39;)); return false" class="M_butt last" target="_self">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/2rightarrow_m.png" id="key_Left_Right" alt="&gt;" title="Move Menu">
+    </a>
+</div>
+
+<div id="canvas_outer">
+<form action="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b" method="post" name="form1">
+<div id="osn_tab" style="width: 1110px; height: 1120px;">
+  <canvas class="pmd" id="canvas" width="1107" height="1117" onclick="Canvas_click(this)" style="display: inline-block;"></canvas>
+</div>
+<div id="layer_menu" style="display: none; top: -1000px;">
+<div class="center" style="padding-top:5px;">
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="Hide_tab_all(document.getElementById(&#39;key_HS_all&#39;)); return false" class="M_butt" target="_self">
+    <img title="Hide/Show all" alt="v" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/downarrow1.png" id="key_HS_all"></a>
+    <a href="http://127.0.0.1/phpmyadmin/db_structure.php?server=1&amp;db=seldo&amp;token=61fc54b4cc33165c220c552dde0fec2b#" onclick="No_have_constr(document.getElementById(&#39;key_HS&#39;)); return false" class="M_butt" target="_self">
+    <img title="Hide/Show Tables with no relation" alt="v" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/downarrow2.png" id="key_HS"></a>
+</div>
+
+<div id="id_scroll_tab" class="scroll_tab">
+    <table width="100%" style="padding-left: 3px;">
+<tbody><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;branch&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.branch&#39;)" title="Hide" id="check_vis_seldo.branch" style="margin:0px;" type="checkbox" value="seldo.branch" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.branch&#39;);">seldo.branch</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;cheque&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.cheque&#39;)" title="Hide" id="check_vis_seldo.cheque" style="margin:0px;" type="checkbox" value="seldo.cheque" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.cheque&#39;);">seldo.cheque</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;customer&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.customer&#39;)" title="Hide" id="check_vis_seldo.customer" style="margin:0px;" type="checkbox" value="seldo.customer" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.customer&#39;);">seldo.customer</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;employee&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.employee&#39;)" title="Hide" id="check_vis_seldo.employee" style="margin:0px;" type="checkbox" value="seldo.employee" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.employee&#39;);">seldo.employee</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;finance&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.finance&#39;)" title="Hide" id="check_vis_seldo.finance" style="margin:0px;" type="checkbox" value="seldo.finance" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.finance&#39;);">seldo.finance</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;finisheditem&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.finisheditem&#39;)" title="Hide" id="check_vis_seldo.finisheditem" style="margin:0px;" type="checkbox" value="seldo.finisheditem" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.finisheditem&#39;);">seldo.finisheditem</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;grn&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.grn&#39;)" title="Hide" id="check_vis_seldo.grn" style="margin:0px;" type="checkbox" value="seldo.grn" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.grn&#39;);">seldo.grn</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;invoice&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.invoice&#39;)" title="Hide" id="check_vis_seldo.invoice" style="margin:0px;" type="checkbox" value="seldo.invoice" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.invoice&#39;);">seldo.invoice</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;item_has_sale&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.item_has_sale&#39;)" title="Hide" id="check_vis_seldo.item_has_sale" style="margin:0px;" type="checkbox" value="seldo.item_has_sale" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.item_has_sale&#39;);">seldo.item_has_sale</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;payment&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.payment&#39;)" title="Hide" id="check_vis_seldo.payment" style="margin:0px;" type="checkbox" value="seldo.payment" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.payment&#39;);">seldo.payment</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;payment_has_cheque&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.payment_has_cheque&#39;)" title="Hide" id="check_vis_seldo.payment_has_cheque" style="margin:0px;" type="checkbox" value="seldo.payment_has_cheque" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.payment_has_cheque&#39;);">seldo.payment_has_cheque</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;rawitem&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.rawitem&#39;)" title="Hide" id="check_vis_seldo.rawitem" style="margin:0px;" type="checkbox" value="seldo.rawitem" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.rawitem&#39;);">seldo.rawitem</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;sale&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.sale&#39;)" title="Hide" id="check_vis_seldo.sale" style="margin:0px;" type="checkbox" value="seldo.sale" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.sale&#39;);">seldo.sale</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;sale_has_finance&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.sale_has_finance&#39;)" title="Hide" id="check_vis_seldo.sale_has_finance" style="margin:0px;" type="checkbox" value="seldo.sale_has_finance" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.sale_has_finance&#39;);">seldo.sale_has_finance</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;supplier&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.supplier&#39;)" title="Hide" id="check_vis_seldo.supplier" style="margin:0px;" type="checkbox" value="seldo.supplier" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.supplier&#39;);">seldo.supplier</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;useraccount&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.useraccount&#39;)" title="Hide" id="check_vis_seldo.useraccount" style="margin:0px;" type="checkbox" value="seldo.useraccount" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.useraccount&#39;);">seldo.useraccount</td></tr><tr><td title="Structure" width="1px" onmouseover="this.className=&#39;L_butt2_2&#39;" onmouseout="this.className=&#39;L_butt2_1&#39;" class="L_butt2_1"><img onclick="Start_tab_upd(&#39;vehicledetail&#39;);" src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec.png" alt=""></td><td width="1px"><input onclick="VisibleTab(this,&#39;seldo.vehicledetail&#39;)" title="Hide" id="check_vis_seldo.vehicledetail" style="margin:0px;" type="checkbox" value="seldo.vehicledetail" checked="checked"></td><td class="pmd_Tabs" onmouseover="this.className=&#39;pmd_Tabs2&#39;" onmouseout="this.className=&#39;pmd_Tabs&#39;" onclick="Select_tab(&#39;seldo.vehicledetail&#39;);">seldo.vehicledetail</td></tr></tbody></table></div><div class="center">Number of tables: 17</div><div class="floatright"><div id="layer_menu_sizer" onmousedown="layer_menu_cur_click=1"></div></div></div><input name="t_x[seldo.branch]" type="hidden" id="t_x_seldo.branch_"><input name="t_y[seldo.branch]" type="hidden" id="t_y_seldo.branch_"><input name="t_v[seldo.branch]" type="hidden" id="t_v_seldo.branch_"><input name="t_h[seldo.branch]" type="hidden" id="t_h_seldo.branch_"><table id="seldo.branch" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 323px; top: 367px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.branch" onclick="Small_tab(&#39;seldo.branch&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;branch&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.branch" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.branch&#39;);" onmouseover="Table_onover(&#39;seldo.branch&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.branch&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        branch    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.branch"><tr id="id_tr_branch.BraID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;branch&#39;,&#39;BraID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.branch.BraID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            BraID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_branch.BraCity" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;branch&#39;,&#39;BraCity&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.branch.BraCity">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            BraCity : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_branch.BraManID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;branch&#39;,&#39;BraManID&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.branch.BraManID">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            BraManID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_branch.BraContcatNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;branch&#39;,&#39;BraContcatNo&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.branch.BraContcatNo">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            BraContcatNo : varchar(15)</div>
+</td>
+</tr>
+<tr id="id_tr_branch.BraEmail" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;branch&#39;,&#39;BraEmail&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.branch.BraEmail">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            BraEmail : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_branch.BraAddress" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;branch&#39;,&#39;BraAddress&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.branch.BraAddress">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            BraAddress : varchar(200)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.cheque]" type="hidden" id="t_x_seldo.cheque_"><input name="t_y[seldo.cheque]" type="hidden" id="t_y_seldo.cheque_"><input name="t_v[seldo.cheque]" type="hidden" id="t_v_seldo.cheque_"><input name="t_h[seldo.cheque]" type="hidden" id="t_h_seldo.cheque_"><table id="seldo.cheque" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 324px; top: 39px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.cheque" onclick="Small_tab(&#39;seldo.cheque&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;cheque&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.cheque" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.cheque&#39;);" onmouseover="Table_onover(&#39;seldo.cheque&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.cheque&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        cheque    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.cheque"><tr id="id_tr_cheque.ChequeNO" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;cheque&#39;,&#39;ChequeNO&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.cheque.ChequeNO">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            ChequeNO : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_cheque.Bank" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;cheque&#39;,&#39;Bank&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.cheque.Bank">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Bank : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_cheque.Date" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;cheque&#39;,&#39;Date&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.cheque.Date">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Date : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_cheque.customer_CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;cheque&#39;,&#39;customer_CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.cheque.customer_CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            customer_CusID : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.customer]" type="hidden" id="t_x_seldo.customer_"><input name="t_y[seldo.customer]" type="hidden" id="t_y_seldo.customer_"><input name="t_v[seldo.customer]" type="hidden" id="t_v_seldo.customer_"><input name="t_h[seldo.customer]" type="hidden" id="t_h_seldo.customer_"><table id="seldo.customer" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 572px; top: 41px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.customer" onclick="Small_tab(&#39;seldo.customer&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;customer&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.customer" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.customer&#39;);" onmouseover="Table_onover(&#39;seldo.customer&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.customer&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        customer    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.customer"><tr id="id_tr_customer.CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;customer&#39;,&#39;CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.customer.CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            CusID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_customer.NIC" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;customer&#39;,&#39;NIC&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.customer.NIC">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            NIC : varchar(20)</div>
+</td>
+</tr>
+<tr id="id_tr_customer.CusName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;customer&#39;,&#39;CusName&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.customer.CusName">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            CusName : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_customer.ContactNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;customer&#39;,&#39;ContactNo&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.customer.ContactNo">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ContactNo : varchar(15)</div>
+</td>
+</tr>
+<tr id="id_tr_customer.Address" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;customer&#39;,&#39;Address&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.customer.Address">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Address : varchar(150)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.employee]" type="hidden" id="t_x_seldo.employee_"><input name="t_y[seldo.employee]" type="hidden" id="t_y_seldo.employee_"><input name="t_v[seldo.employee]" type="hidden" id="t_v_seldo.employee_"><input name="t_h[seldo.employee]" type="hidden" id="t_h_seldo.employee_"><table id="seldo.employee" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 23px; top: 461px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.employee" onclick="Small_tab(&#39;seldo.employee&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;employee&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.employee" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.employee&#39;);" onmouseover="Table_onover(&#39;seldo.employee&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.employee&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        employee    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.employee"><tr id="id_tr_employee.EmpID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;EmpID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.employee.EmpID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            EmpID : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.NIC" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;NIC&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.NIC">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            NIC : varchar(20)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.FName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;FName&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.FName">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            FName : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.LName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;LName&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.LName">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            LName : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.Designation" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;Designation&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.Designation">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Designation : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.Salary" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;Salary&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.Salary">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Salary : double</div>
+</td>
+</tr>
+<tr id="id_tr_employee.ContactNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;ContactNo&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.ContactNo">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ContactNo : varchar(15)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.EMGContact" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;EMGContact&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.EMGContact">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            EMGContact : varchar(15)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.DOB" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;DOB&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.DOB">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_date.png" alt="*">
+            DOB : date</div>
+</td>
+</tr>
+<tr id="id_tr_employee.Age" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;Age&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.Age">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Age : int(3)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.Address" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;Address&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.Address">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Address : varchar(150)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.BloodGroup" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;BloodGroup&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.BloodGroup">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            BloodGroup : varchar(5)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.SpNote" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;SpNote&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.SpNote">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SpNote : varchar(250)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.Email" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;Email&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.employee.Email">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Email : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.userAccount_UserName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;userAccount_UserName&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.employee.userAccount_UserName">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            userAccount_UserName : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_employee.branch_BraID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;employee&#39;,&#39;branch_BraID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.employee.branch_BraID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            branch_BraID : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.finance]" type="hidden" id="t_x_seldo.finance_"><input name="t_y[seldo.finance]" type="hidden" id="t_y_seldo.finance_"><input name="t_v[seldo.finance]" type="hidden" id="t_v_seldo.finance_"><input name="t_h[seldo.finance]" type="hidden" id="t_h_seldo.finance_"><table id="seldo.finance" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 27px; top: 169px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.finance" onclick="Small_tab(&#39;seldo.finance&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;finance&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.finance" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.finance&#39;);" onmouseover="Table_onover(&#39;seldo.finance&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.finance&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        finance    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.finance"><tr id="id_tr_finance.AccountNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finance&#39;,&#39;AccountNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.finance.AccountNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            AccountNo : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_finance.Date" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finance&#39;,&#39;Date&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finance.Date">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_date.png" alt="*">
+            Date : date</div>
+</td>
+</tr>
+<tr id="id_tr_finance.Revenue" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finance&#39;,&#39;Revenue&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finance.Revenue">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Revenue : double</div>
+</td>
+</tr>
+<tr id="id_tr_finance.TotalCost" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finance&#39;,&#39;TotalCost&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finance.TotalCost">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            TotalCost : double</div>
+</td>
+</tr>
+<tr id="id_tr_finance.Profit" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finance&#39;,&#39;Profit&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finance.Profit">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Profit : double</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.finisheditem]" type="hidden" id="t_x_seldo.finisheditem_"><input name="t_y[seldo.finisheditem]" type="hidden" id="t_y_seldo.finisheditem_"><input name="t_v[seldo.finisheditem]" type="hidden" id="t_v_seldo.finisheditem_"><input name="t_h[seldo.finisheditem]" type="hidden" id="t_h_seldo.finisheditem_"><table id="seldo.finisheditem" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 869px; top: 489px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.finisheditem" onclick="Small_tab(&#39;seldo.finisheditem&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;finisheditem&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.finisheditem" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.finisheditem&#39;);" onmouseover="Table_onover(&#39;seldo.finisheditem&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.finisheditem&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        finisheditem    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.finisheditem"><tr id="id_tr_finisheditem.ItemCode" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;ItemCode&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.ItemCode">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            ItemCode : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.ItemName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;ItemName&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.ItemName">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ItemName : varchar(300)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.ItemCat" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;ItemCat&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.ItemCat">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ItemCat : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.Lenght" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;Lenght&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.Lenght">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Lenght : double(100,2)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.LenghtUnit" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;LenghtUnit&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.LenghtUnit">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            LenghtUnit : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.Width" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;Width&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.Width">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Width : double(100,2)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.WidthUnit" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;WidthUnit&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.WidthUnit">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            WidthUnit : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.Height" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;Height&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.Height">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Height : double(100,2)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.HeightUnit" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;HeightUnit&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.HeightUnit">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            HeightUnit : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.SquareFeet" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;SquareFeet&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.SquareFeet">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            SquareFeet : double(100,2)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.Color" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;Color&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.Color">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Color : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.Thickness" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;Thickness&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.Thickness">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Thickness : double</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.ThicknessUnit" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;ThicknessUnit&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.ThicknessUnit">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ThicknessUnit : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.Price" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;Price&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.Price">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Price : double</div>
+</td>
+</tr>
+<tr id="id_tr_finisheditem.QtyOnHand" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;finisheditem&#39;,&#39;QtyOnHand&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.finisheditem.QtyOnHand">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            QtyOnHand : double</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.grn]" type="hidden" id="t_x_seldo.grn_"><input name="t_y[seldo.grn]" type="hidden" id="t_y_seldo.grn_"><input name="t_v[seldo.grn]" type="hidden" id="t_v_seldo.grn_"><input name="t_h[seldo.grn]" type="hidden" id="t_h_seldo.grn_"><table id="seldo.grn" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 321px; top: 556px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.grn" onclick="Small_tab(&#39;seldo.grn&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;grn&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.grn" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.grn&#39;);" onmouseover="Table_onover(&#39;seldo.grn&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.grn&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        grn    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.grn"><tr id="id_tr_grn.grnNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;grnNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.grn.grnNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            grnNo : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_grn.grnDate" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;grnDate&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.grn.grnDate">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_date.png" alt="*">
+            grnDate : date</div>
+</td>
+</tr>
+<tr id="id_tr_grn.Unit" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;Unit&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.grn.Unit">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Unit : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_grn.Quantity" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;Quantity&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.grn.Quantity">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Quantity : double</div>
+</td>
+</tr>
+<tr id="id_tr_grn.Thickness" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;Thickness&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.grn.Thickness">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Thickness : double</div>
+</td>
+</tr>
+<tr id="id_tr_grn.TotalAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;TotalAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.grn.TotalAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            TotalAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_grn.PaidAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;PaidAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.grn.PaidAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            PaidAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_grn.BalanceAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;BalanceAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.grn.BalanceAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            BalanceAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_grn.supplier_SupID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;supplier_SupID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.grn.supplier_SupID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            supplier_SupID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_grn.supplier_SupNIC" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;grn&#39;,&#39;supplier_SupNIC&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.grn.supplier_SupNIC">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            supplier_SupNIC : varchar(15)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.invoice]" type="hidden" id="t_x_seldo.invoice_"><input name="t_y[seldo.invoice]" type="hidden" id="t_y_seldo.invoice_"><input name="t_v[seldo.invoice]" type="hidden" id="t_v_seldo.invoice_"><input name="t_h[seldo.invoice]" type="hidden" id="t_h_seldo.invoice_"><table id="seldo.invoice" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 855px; top: 238px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.invoice" onclick="Small_tab(&#39;seldo.invoice&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;invoice&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.invoice" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.invoice&#39;);" onmouseover="Table_onover(&#39;seldo.invoice&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.invoice&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        invoice    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.invoice"><tr id="id_tr_invoice.InvoiceNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;InvoiceNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.invoice.InvoiceNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            InvoiceNo : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.Date" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;Date&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.invoice.Date">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_date.png" alt="*">
+            Date : datetime</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.Quantity" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;Quantity&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.invoice.Quantity">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Quantity : double</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.Thickness" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;Thickness&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.invoice.Thickness">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Thickness : double</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.TotalAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;TotalAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.invoice.TotalAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            TotalAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.PainAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;PainAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.invoice.PainAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            PainAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.BalanceAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;BalanceAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.invoice.BalanceAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            BalanceAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.sale_SONumber" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;sale_SONumber&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.invoice.sale_SONumber">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_SONumber : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.sale_LineNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;sale_LineNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.invoice.sale_LineNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_LineNo : int(10)</div>
+</td>
+</tr>
+<tr id="id_tr_invoice.customer_CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;invoice&#39;,&#39;customer_CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.invoice.customer_CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            customer_CusID : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.item_has_sale]" type="hidden" id="t_x_seldo.item_has_sale_"><input name="t_y[seldo.item_has_sale]" type="hidden" id="t_y_seldo.item_has_sale_"><input name="t_v[seldo.item_has_sale]" type="hidden" id="t_v_seldo.item_has_sale_"><input name="t_h[seldo.item_has_sale]" type="hidden" id="t_h_seldo.item_has_sale_"><table id="seldo.item_has_sale" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 830px; top: 842px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.item_has_sale" onclick="Small_tab(&#39;seldo.item_has_sale&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;item_has_sale&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.item_has_sale" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.item_has_sale&#39;);" onmouseover="Table_onover(&#39;seldo.item_has_sale&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.item_has_sale&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        item_has_sale    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.item_has_sale"><tr id="id_tr_item_has_sale.item_ItemCode" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;item_has_sale&#39;,&#39;item_ItemCode&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.item_has_sale.item_ItemCode">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            item_ItemCode : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_item_has_sale.sale_SONumber" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;item_has_sale&#39;,&#39;sale_SONumber&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.item_has_sale.sale_SONumber">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_SONumber : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_item_has_sale.sale_LineNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;item_has_sale&#39;,&#39;sale_LineNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.item_has_sale.sale_LineNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_LineNo : int(10)</div>
+</td>
+</tr>
+<tr id="id_tr_item_has_sale.sale_customer_CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;item_has_sale&#39;,&#39;sale_customer_CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.item_has_sale.sale_customer_CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_customer_CusID : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.payment]" type="hidden" id="t_x_seldo.payment_"><input name="t_y[seldo.payment]" type="hidden" id="t_y_seldo.payment_"><input name="t_v[seldo.payment]" type="hidden" id="t_v_seldo.payment_"><input name="t_h[seldo.payment]" type="hidden" id="t_h_seldo.payment_"><table id="seldo.payment" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 857px; top: 34px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.payment" onclick="Small_tab(&#39;seldo.payment&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;payment&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.payment" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.payment&#39;);" onmouseover="Table_onover(&#39;seldo.payment&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.payment&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        payment    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.payment"><tr id="id_tr_payment.PaymentID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;PaymentID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.payment.PaymentID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            PaymentID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_payment.Date" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;Date&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.payment.Date">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_date.png" alt="*">
+            Date : date</div>
+</td>
+</tr>
+<tr id="id_tr_payment.NoOfInstallment" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;NoOfInstallment&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.payment.NoOfInstallment">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            NoOfInstallment : int(11)</div>
+</td>
+</tr>
+<tr id="id_tr_payment.DueBalance" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;DueBalance&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.payment.DueBalance">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            DueBalance : double</div>
+</td>
+</tr>
+<tr id="id_tr_payment.TotalAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;TotalAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.payment.TotalAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            TotalAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_payment.Interest" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;Interest&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.payment.Interest">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Interest : double</div>
+</td>
+</tr>
+<tr id="id_tr_payment.SumOfInstallment" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;SumOfInstallment&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.payment.SumOfInstallment">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            SumOfInstallment : double</div>
+</td>
+</tr>
+<tr id="id_tr_payment.customer_CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment&#39;,&#39;customer_CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.payment.customer_CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            customer_CusID : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.payment_has_cheque]" type="hidden" id="t_x_seldo.payment_has_cheque_"><input name="t_y[seldo.payment_has_cheque]" type="hidden" id="t_y_seldo.payment_has_cheque_"><input name="t_v[seldo.payment_has_cheque]" type="hidden" id="t_v_seldo.payment_has_cheque_"><input name="t_h[seldo.payment_has_cheque]" type="hidden" id="t_h_seldo.payment_has_cheque_"><table id="seldo.payment_has_cheque" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 30px; top: 40px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.payment_has_cheque" onclick="Small_tab(&#39;seldo.payment_has_cheque&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;payment_has_cheque&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.payment_has_cheque" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.payment_has_cheque&#39;);" onmouseover="Table_onover(&#39;seldo.payment_has_cheque&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.payment_has_cheque&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        payment_has_cheque    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.payment_has_cheque"><tr id="id_tr_payment_has_cheque.payment_PaymentID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment_has_cheque&#39;,&#39;payment_PaymentID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.payment_has_cheque.payment_PaymentID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            payment_PaymentID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_payment_has_cheque.payment_customer_CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment_has_cheque&#39;,&#39;payment_customer_CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.payment_has_cheque.payment_customer_CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            payment_customer_CusID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_payment_has_cheque.cheque_ChequeNO" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;payment_has_cheque&#39;,&#39;cheque_ChequeNO&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.payment_has_cheque.cheque_ChequeNO">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            cheque_ChequeNO : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.rawitem]" type="hidden" id="t_x_seldo.rawitem_"><input name="t_y[seldo.rawitem]" type="hidden" id="t_y_seldo.rawitem_"><input name="t_v[seldo.rawitem]" type="hidden" id="t_v_seldo.rawitem_"><input name="t_h[seldo.rawitem]" type="hidden" id="t_h_seldo.rawitem_"><table id="seldo.rawitem" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 320px; top: 816px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.rawitem" onclick="Small_tab(&#39;seldo.rawitem&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;rawitem&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.rawitem" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.rawitem&#39;);" onmouseover="Table_onover(&#39;seldo.rawitem&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.rawitem&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        rawitem    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.rawitem"><tr id="id_tr_rawitem.SItemID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;SItemID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.rawitem.SItemID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            SItemID : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.SItemName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;SItemName&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.SItemName">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SItemName : varchar(300)</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.SItemCat" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;SItemCat&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.SItemCat">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SItemCat : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.SItemPrice" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;SItemPrice&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.SItemPrice">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            SItemPrice : double</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.rawItemcolor" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;rawItemcolor&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.rawItemcolor">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            rawItemcolor : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.CostPrice" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;CostPrice&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.CostPrice">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            CostPrice : double</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.Quantity" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;Quantity&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.Quantity">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Quantity : int(50)</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.Weight" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;Weight&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.Weight">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Weight : double</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.Length" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;Length&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.Length">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Length : double</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.Thickness" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;Thickness&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.rawitem.Thickness">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Thickness : double</div>
+</td>
+</tr>
+<tr id="id_tr_rawitem.grn_grnNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;rawitem&#39;,&#39;grn_grnNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.rawitem.grn_grnNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            grn_grnNo : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.sale]" type="hidden" id="t_x_seldo.sale_"><input name="t_y[seldo.sale]" type="hidden" id="t_y_seldo.sale_"><input name="t_v[seldo.sale]" type="hidden" id="t_v_seldo.sale_"><input name="t_h[seldo.sale]" type="hidden" id="t_h_seldo.sale_"><table id="seldo.sale" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 573px; top: 268px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.sale" onclick="Small_tab(&#39;seldo.sale&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;sale&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.sale" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.sale&#39;);" onmouseover="Table_onover(&#39;seldo.sale&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.sale&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        sale    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.sale"><tr id="id_tr_sale.SONumber" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;SONumber&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale.SONumber">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            SONumber : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.LineNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;LineNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale.LineNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            LineNo : int(10)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.PayMethod" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;PayMethod&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.PayMethod">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            PayMethod : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.ItemCode" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;ItemCode&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.ItemCode">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ItemCode : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.ItemName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;ItemName&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.ItemName">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ItemName : varchar(150)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.ItemColor" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;ItemColor&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.ItemColor">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ItemColor : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Quantity" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Quantity&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Quantity">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Quantity : int(20)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Unit01" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Unit01&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Unit01">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Unit01 : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.SizeOfUnit01" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;SizeOfUnit01&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.SizeOfUnit01">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SizeOfUnit01 : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Unit02" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Unit02&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Unit02">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Unit02 : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.SizeOfUnit02" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;SizeOfUnit02&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.SizeOfUnit02">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SizeOfUnit02 : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Rate" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Rate&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Rate">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Rate : double</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Amount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Amount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Amount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            Amount : double</div>
+</td>
+</tr>
+<tr id="id_tr_sale.TotAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;TotAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.TotAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            TotAmount : double</div>
+</td>
+</tr>
+<tr id="id_tr_sale.TaxAmount" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;TaxAmount&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.TaxAmount">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            TaxAmount : double(100,2)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.ChequeNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;ChequeNo&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.ChequeNo">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            ChequeNo : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.DateTime" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;DateTime&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.DateTime">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_date.png" alt="*">
+            DateTime : datetime</div>
+</td>
+</tr>
+<tr id="id_tr_sale.customer_CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;customer_CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale.customer_CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            customer_CusID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.branch_BraID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;branch_BraID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale.branch_BraID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            branch_BraID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Thikness" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Thikness&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Thikness">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Thikness : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.CurveWidth" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;CurveWidth&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.CurveWidth">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            CurveWidth : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Height" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Height&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Height">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Height : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.Width" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;Width&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.Width">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Width : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale.UnitOfHeightWidth" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale&#39;,&#39;UnitOfHeightWidth&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.sale.UnitOfHeightWidth">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            UnitOfHeightWidth : varchar(100)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.sale_has_finance]" type="hidden" id="t_x_seldo.sale_has_finance_"><input name="t_y[seldo.sale_has_finance]" type="hidden" id="t_y_seldo.sale_has_finance_"><input name="t_v[seldo.sale_has_finance]" type="hidden" id="t_v_seldo.sale_has_finance_"><input name="t_h[seldo.sale_has_finance]" type="hidden" id="t_h_seldo.sale_has_finance_"><table id="seldo.sale_has_finance" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 25px; top: 317px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.sale_has_finance" onclick="Small_tab(&#39;seldo.sale_has_finance&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;sale_has_finance&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.sale_has_finance" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.sale_has_finance&#39;);" onmouseover="Table_onover(&#39;seldo.sale_has_finance&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.sale_has_finance&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        sale_has_finance    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.sale_has_finance"><tr id="id_tr_sale_has_finance.sale_SONumber" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale_has_finance&#39;,&#39;sale_SONumber&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale_has_finance.sale_SONumber">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_SONumber : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_sale_has_finance.sale_LineNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale_has_finance&#39;,&#39;sale_LineNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale_has_finance.sale_LineNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_LineNo : int(10)</div>
+</td>
+</tr>
+<tr id="id_tr_sale_has_finance.sale_customer_CusID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale_has_finance&#39;,&#39;sale_customer_CusID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale_has_finance.sale_customer_CusID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_customer_CusID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_sale_has_finance.sale_branch_BraID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale_has_finance&#39;,&#39;sale_branch_BraID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale_has_finance.sale_branch_BraID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            sale_branch_BraID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_sale_has_finance.finance_AccountNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;sale_has_finance&#39;,&#39;finance_AccountNo&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.sale_has_finance.finance_AccountNo">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            finance_AccountNo : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.supplier]" type="hidden" id="t_x_seldo.supplier_"><input name="t_y[seldo.supplier]" type="hidden" id="t_y_seldo.supplier_"><input name="t_v[seldo.supplier]" type="hidden" id="t_v_seldo.supplier_"><input name="t_h[seldo.supplier]" type="hidden" id="t_h_seldo.supplier_"><table id="seldo.supplier" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 572px; top: 834px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.supplier" onclick="Small_tab(&#39;seldo.supplier&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;supplier&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.supplier" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.supplier&#39;);" onmouseover="Table_onover(&#39;seldo.supplier&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.supplier&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        supplier    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.supplier"><tr id="id_tr_supplier.SupID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;supplier&#39;,&#39;SupID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.supplier.SupID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            SupID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_supplier.SupNIC" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;supplier&#39;,&#39;SupNIC&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.supplier.SupNIC">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            SupNIC : varchar(15)</div>
+</td>
+</tr>
+<tr id="id_tr_supplier.SupName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;supplier&#39;,&#39;SupName&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.supplier.SupName">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SupName : varchar(45)</div>
+</td>
+</tr>
+<tr id="id_tr_supplier.SupAddress" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;supplier&#39;,&#39;SupAddress&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.supplier.SupAddress">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SupAddress : varchar(200)</div>
+</td>
+</tr>
+<tr id="id_tr_supplier.SupEmail" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;supplier&#39;,&#39;SupEmail&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.supplier.SupEmail">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            SupEmail : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_supplier.Telephone" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;supplier&#39;,&#39;Telephone&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.supplier.Telephone">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Telephone : varchar(15)</div>
+</td>
+</tr>
+<tr id="id_tr_supplier.Mobile" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;supplier&#39;,&#39;Mobile&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.supplier.Mobile">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Mobile : varchar(15)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.useraccount]" type="hidden" id="t_x_seldo.useraccount_"><input name="t_y[seldo.useraccount]" type="hidden" id="t_y_seldo.useraccount_"><input name="t_v[seldo.useraccount]" type="hidden" id="t_v_seldo.useraccount_"><input name="t_h[seldo.useraccount]" type="hidden" id="t_h_seldo.useraccount_"><table id="seldo.useraccount" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 25px; top: 866px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.useraccount" onclick="Small_tab(&#39;seldo.useraccount&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;useraccount&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.useraccount" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.useraccount&#39;);" onmouseover="Table_onover(&#39;seldo.useraccount&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.useraccount&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        useraccount    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.useraccount"><tr id="id_tr_useraccount.UserName" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;useraccount&#39;,&#39;UserName&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.useraccount.UserName">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            UserName : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_useraccount.Password" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;useraccount&#39;,&#39;Password&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.useraccount.Password">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            Password : varchar(100)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="t_x[seldo.vehicledetail]" type="hidden" id="t_x_seldo.vehicledetail_"><input name="t_y[seldo.vehicledetail]" type="hidden" id="t_y_seldo.vehicledetail_"><input name="t_v[seldo.vehicledetail]" type="hidden" id="t_v_seldo.vehicledetail_"><input name="t_h[seldo.vehicledetail]" type="hidden" id="t_h_seldo.vehicledetail_"><table id="seldo.vehicledetail" cellpadding="0" cellspacing="0" class="pmd_tab" style="position: absolute; left: 326px; top: 178px; visibility: visible; z-index: 1;">
+<thead>
+<tr>
+        <td class="small_tab" onmouseover="this.className=&#39;small_tab2&#39;;" onmouseout="this.className=&#39;small_tab&#39;;" id="id_hide_tbody_seldo.vehicledetail" onclick="Small_tab(&#39;seldo.vehicledetail&#39;, 1)">v</td>
+    <td class="small_tab_pref" onmouseover="this.className=&#39;small_tab_pref2&#39;;" onmouseout="this.className=&#39;small_tab_pref&#39;;" onclick="Start_tab_upd(&#39;vehicledetail&#39;);">
+        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/exec_small.png" alt=""></td>
+    <td id="id_zag_seldo.vehicledetail" class="tab_zag" onmousedown="cur_click=document.getElementById(&#39;seldo.vehicledetail&#39;);" onmouseover="Table_onover(&#39;seldo.vehicledetail&#39;,0,0 )" onmouseout="Table_onover(&#39;seldo.vehicledetail&#39;,1,0)">
+        <span class="owner">
+            seldo.
+        </span>
+        vehicledetail    </td>
+        </tr>
+    </thead>
+    <tbody id="id_tbody_seldo.vehicledetail"><tr id="id_tr_vehicledetail.VID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;vehicledetail&#39;,&#39;VID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.vehicledetail.VID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            VID : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_vehicledetail.VNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;vehicledetail&#39;,&#39;VNo&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.vehicledetail.VNo">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            VNo : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_vehicledetail.VType" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;vehicledetail&#39;,&#39;VType&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.vehicledetail.VType">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            VType : varchar(100)</div>
+</td>
+</tr>
+<tr id="id_tr_vehicledetail.TyreSize" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;vehicledetail&#39;,&#39;TyreSize&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.vehicledetail.TyreSize">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_int.png" alt="*">
+            TyreSize : double</div>
+</td>
+</tr>
+<tr id="id_tr_vehicledetail.LisonNo" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;vehicledetail&#39;,&#39;LisonNo&#39;,0)">
+            <td width="10px" colspan="3" id="seldo.vehicledetail.LisonNo">
+        <div class="nowrap">
+                            <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/Field_small_char.png" alt="*">
+            LisonNo : varchar(50)</div>
+</td>
+</tr>
+<tr id="id_tr_vehicledetail.branch_BraID" class="tab_field" onmouseover="old_class = this.className; this.className = &#39;tab_field_2&#39;;" onmouseout="this.className = old_class;" onmousedown="Click_field(&#39;vehicledetail&#39;,&#39;branch_BraID&#39;,1)">
+            <td width="10px" colspan="3" id="seldo.vehicledetail.branch_BraID">
+        <div class="nowrap">
+                        <img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/FieldKey_small.png" alt="*">
+            branch_BraID : varchar(50)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+<div id="pmd_hint"></div>
+
+<table id="layer_new_relation" style="display:none;" width="5%" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+    <td class="frams1" width="10px"></td>
+    <td class="frams5" width="99%"></td>
+    <td class="frams2" width="10px"><div class="bor"></div></td>
+</tr>
+<tr>
+    <td class="frams8"></td>
+    <td class="input_tab">
+        <table width="168" class="center" cellpadding="2" cellspacing="0">
+        <thead>
+        <tr>
+            <td colspan="2" class="center nowrap">
+                <strong>Create relation</strong>
+            </td>
+        </tr>
+        </thead>
+        <tbody id="foreign_relation">
+        <tr>
+        <td colspan="2" class="center nowrap"><strong>FOREIGN KEY</strong></td>
+        </tr>
+        <tr>
+            <td width="58" class="nowrap">on delete</td>
+            <td width="102"><select name="on_delete" id="on_delete">
+                    <option value="nix" selected="selected">--</option>
+                    <option value="CASCADE">CASCADE</option>
+                    <option value="SET NULL">SET NULL</option>
+                    <option value="NO ACTION">NO ACTION</option>
+                    <option value="RESTRICT">RESTRICT</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="nowrap">on update</td>
+            <td><select name="on_update" id="on_update">
+                    <option value="nix" selected="selected">--</option>
+                    <option value="CASCADE">CASCADE</option>
+                    <option value="SET NULL">SET NULL</option>
+                    <option value="NO ACTION">NO ACTION</option>
+                    <option value="RESTRICT">RESTRICT</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <td colspan="2" class="center nowrap">
+                <input type="button" class="butt" name="Button" value="OK" onclick="New_relation()">
+                <input type="button" class="butt" name="Button" value="Cancel" onclick="document.getElementById(&#39;layer_new_relation&#39;).style.display = &#39;none&#39;;">
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    <td class="frams6"></td>
+</tr>
+<tr>
+    <td class="frams4"><div class="bor"></div></td>
+    <td class="frams7"></td>
+    <td class="frams3"></td>
+</tr>
+</tbody>
+</table>
+
+<table id="layer_upd_relation" style="display:none;" width="5%" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+    <td class="frams1" width="10px"></td>
+    <td class="frams5" width="99%"></td>
+    <td class="frams2" width="10px"><div class="bor"></div></td>
+</tr>
+<tr>
+    <td class="frams8"></td>
+    <td class="input_tab">
+        <table width="100%" class="center" cellpadding="2" cellspacing="0">
+        <tbody><tr>
+            <td colspan="3" class="center nowrap">
+                <strong>Delete relation</strong>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="center nowrap">
+                <input name="Button" type="button" class="butt" onclick="Upd_relation()" value="Delete">
+                <input type="button" class="butt" name="Button" value="Cancel" onclick="document.getElementById(&#39;layer_upd_relation&#39;).style.display = &#39;none&#39;; Re_load();">
+            </td>
+        </tr>
+    </tbody></table></td>
+    <td class="frams6"></td>
+</tr>
+<tr>
+    <td class="frams4"><div class="bor"></div></td>
+    <td class="frams7"></td>
+    <td class="frams3"></td>
+</tr>
+</tbody>
+</table>
+
+<table id="pmd_optionse" style="display:none;" width="5%" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+    <td class="frams1" width="10px"></td>
+    <td class="frams5" width="99%"></td>
+    <td class="frams2" width="10px"><div class="bor"></div></td>
+</tr>
+<tr>
+    <td class="frams8"></td>
+    <td class="input_tab">
+        <table width="168" class="center" cellpadding="2" cellspacing="0">
+       <thead>
+        <tr>
+            <td colspan="2" rowspan="2" id="option_col_name" class="center nowrap">
+            </td>
+        </tr>
+        </thead>
+        <tbody id="where">
+        <tr><td class="center nowrap"><b>WHERE</b></td></tr>
+        <tr>
+        <td width="58" class="nowrap">Relation operator</td>
+            <td width="102"><select name="rel_opt" id="rel_opt">
+                    <option value="--" selected="selected"> -- </option>
+                    <option value="="> = </option>
+                    <option value="&gt;"> &gt; </option>
+                    <option value="&lt;"> &lt; </option>
+                    <option value="&gt;="> &gt;= </option>
+                    <option value="&lt;="> &lt;= </option>
+                    <option value="NOT"> NOT </option>
+                    <option value="IN"> IN </option>
+                    <option value="EXCEPT"> Except </option>
+                    <option value="NOT IN"> NOT IN </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        <td class="nowrap">Value/<br>subquery</td>
+            <td><textarea id="Query" value="" cols="18"></textarea>
+            </td>
+        </tr>
+        <tr><td class="center nowrap"><b>Rename to</b></td></tr>
+        <tr>
+        <td width="58" class="nowrap">New name</td>
+            <td width="102"><input type="text" value="" id="new_name"></td>
+        </tr>
+        <tr><td class="center nowrap"><b>Aggregate</b></td></tr>
+         <tr>
+         <td width="58" class="nowrap">Operator</td>
+            <td width="102"><select name="operator" id="operator">
+                    <option value="---" selected="selected">---</option>
+                    <option value="sum"> SUM </option>
+                    <option value="min"> MIN </option>
+                    <option value="max"> MAX </option>
+                    <option value="avg"> AVG </option>
+                    <option value="count"> COUNT </option>
+                    </select>
+           </td></tr>
+           <tr>
+                <td width="58" class="center nowrap"><b>GROUP BY</b></td>
+                <td><input type="checkbox" value="groupby" id="groupby"></td>
+           </tr>
+           <tr>
+                <td width="58" class="center nowrap"><b>ORDER BY</b></td>
+                <td><input type="checkbox" value="orderby" id="orderby"></td>
+           </tr>
+          <tr><td class="center nowrap"><b>HAVING</b></td></tr>
+          <tr>
+          <td width="58" class="nowrap">Operator</td>
+            <td width="102"><select name="h_operator" id="h_operator">
+                    <option value="---" selected="selected">---</option>
+                    <option value="None"> None </option>
+                    <option value="sum"> SUM </option>
+                    <option value="min"> MIN </option>
+                    <option value="max"> MAX </option>
+                    <option value="avg"> AVG </option>
+                    <option value="count"> COUNT </option>
+                    </select>
+               </td></tr>
+            <tr>
+            <td width="58" class="nowrap">Relation operator</td>
+            <td width="102"><select name="h_rel_opt" id="h_rel_opt">
+                    <option value="--" selected="selected"> -- </option>
+                    <option value="="> = </option>
+                    <option value="&gt;"> &gt; </option>
+                    <option value="&lt;"> &lt; </option>
+                    <option value="&gt;="> &gt;= </option>
+                    <option value="&lt;="> &lt;= </option>
+                    <option value="NOT"> NOT </option>
+                    <option value="IN"> IN </option>
+                    <option value="EXCEPT"> Except </option>
+                    <option value="NOT IN"> NOT IN </option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td width="58" class="nowrap">
+                    Value/<br>
+                    subquery                </td>
+                <td width="102">
+                    <textarea id="having" value="" cols="18"></textarea>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <td colspan="2" class="center nowrap">
+                <input type="button" class="butt" name="Button" value="OK" onclick="add_object()">
+                <input type="button" class="butt" name="Button" value="Cancel" onclick="Close_option()">
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    <td class="frams6"></td>
+</tr>
+<tr>
+    <td class="frams4"><div class="bor"></div></td>
+    <td class="frams7"></td>
+    <td class="frams3"></td>
+</tr>
+</tbody>
+</table>
+
+<table id="query_rename_to" style="display:none;" width="5%" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+    <td class="frams1" width="10px"></td>
+    <td class="frams5" width="99%"></td>
+    <td class="frams2" width="10px"><div class="bor"></div></td>
+</tr>
+<tr>
+    <td class="frams8"></td>
+    <td class="input_tab">
+        <table width="168" class="center" cellpadding="2" cellspacing="0">
+        <thead>
+            <tr>
+                <td colspan="2" class="center nowrap">
+                    <strong>Rename to</strong>
+                </td>
+            </tr>
+        </thead>
+        <tbody id="rename_to">
+        <tr>
+        <td width="58" class="nowrap">New name</td>
+            <td width="102">
+                <input type="text" value="" id="e_rename">
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <td colspan="2" class="center nowrap">
+                <input type="button" class="butt" name="Button" value="OK" onclick="edit(&#39;Rename&#39;)">
+                <input type="button" class="butt" name="Button" value="Cancel" onclick="document.getElementById(&#39;query_rename_to&#39;).style.display = &#39;none&#39;;">
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    <td class="frams6"></td>
+</tr>
+<tr>
+    <td class="frams4"><div class="bor"></div></td>
+    <td class="frams7"></td>
+    <td class="frams3"></td>
+</tr>
+</tbody>
+</table>
+
+<table id="query_having" style="display:none;" width="5%" cellpadding="0" cellspacing="0">
+<tbody>
+    <tr>
+        <td class="frams1" width="10px"></td>
+        <td class="frams5" width="99%"></td>
+        <td class="frams2" width="10px"><div class="bor"></div></td>
+    </tr>
+<tr>
+    <td class="frams8"></td>
+    <td class="input_tab">
+    <table width="168" class="center" cellpadding="2" cellspacing="0">
+       <thead>
+        <tr>
+          <td colspan="2" class="center nowrap"><strong>HAVING</strong></td>
+        </tr>
+        </thead>
+        <tbody id="rename_to">
+        <tr>
+        <td width="58" class="nowrap">Operator</td>
+            <td width="102"><select name="hoperator" id="hoperator">
+                    <option value="---" selected="selected">---</option>
+                    <option value="None"> None </option>
+                    <option value="sum"> SUM </option>
+                    <option value="min"> MIN </option>
+                    <option value="max"> MAX </option>
+                    <option value="avg"> AVG </option>
+                    <option value="count"> COUNT </option>
+                    </select>
+           </td></tr>
+        <tr>
+        </tr><tr>
+        <td width="58" class="nowrap">Operator</td>
+            <td width="102"><select name="hrel_opt" id="hrel_opt">
+                <option value="--" selected="selected"> -- </option>
+                    <option value="="> = </option>
+                    <option value="&gt;"> &gt; </option>
+                    <option value="&lt;"> &lt; </option>
+                    <option value="&gt;="> &gt;= </option>
+                    <option value="&lt;="> &lt;= </option>
+                    <option value="NOT"> NOT </option>
+                    <option value="IN"> IN </option>
+                    <option value="EXCEPT"> Except </option>
+                    <option value="NOT IN"> NOT IN </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        <td class="nowrap">Value/<br>subquery</td>
+            <td><textarea id="hQuery" value="" cols="18"></textarea>
+            </td>
+            </tr>
+         </tbody>
+        <tbody>
+        <tr>
+            <td colspan="2" class="center nowrap">
+                <input type="button" class="butt" name="Button" value="OK" onclick="edit(&#39;Having&#39;)">
+                <input type="button" class="butt" name="Button" value="Cancel" onclick="document.getElementById(&#39;query_having&#39;).style.display = &#39;none&#39;;">
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    <td class="frams6"></td>
+</tr>
+<tr>
+    <td class="frams4"><div class="bor"></div></td>
+    <td class="frams7"></td>
+    <td class="frams3"></td>
+</tr>
+</tbody>
+</table>
+
+<table id="query_Aggregate" style="display:none;" width="5%" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+    <td class="frams1" width="10px"></td>
+    <td class="frams5" width="99%"></td>
+    <td class="frams2" width="10px"><div class="bor"></div></td>
+</tr>
+<tr>
+    <td class="frams8"></td>
+    <td class="input_tab">
+        <table width="168" class="center" cellpadding="2" cellspacing="0">
+            <thead>
+                <tr>
+                    <td colspan="2" class="center nowrap">
+                        <strong>Aggregate</strong>
+                    </td>
+                </tr>
+            </thead>
+        <tbody>
+        <tr>
+        <td width="58" class="nowrap">Operator</td>
+            <td width="102">
+                <select name="operator" id="e_operator">
+                    <option value="---" selected="selected">---</option>
+                    <option value="sum"> SUM </option>
+                    <option value="min"> MIN </option>
+                    <option value="max"> MAX </option>
+                       <option value="avg"> AVG </option>
+                    <option value="avg"> COUNT </option>
+                </select>
+           </td></tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <td colspan="2" class="center nowrap">
+                <input type="button" class="butt" name="Button" value="OK" onclick="edit(&#39;Aggregate&#39;)">
+                <input type="button" class="butt" name="Button" value="Cancel" onclick="document.getElementById(&#39;query_Aggregate&#39;).style.display = &#39;none&#39;;">
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    <td class="frams6"></td>
+</tr>
+<tr>
+    <td class="frams4"><div class="bor"></div></td>
+    <td class="frams7"></td>
+    <td class="frams3"></td>
+</tr>
+</tbody>
+</table>
+
+<table id="query_where" style="display:none;" width="5%" cellpadding="0" cellspacing="0">
+<tbody>
+    <tr>
+        <td class="frams1" width="10px"></td>
+        <td class="frams5" width="99%"></td>
+        <td class="frams2" width="10px"><div class="bor"></div></td>
+    </tr>
+<tr>
+    <td class="frams8"></td>
+    <td class="input_tab">
+    <table width="168" class="center" cellpadding="2" cellspacing="0">
+       <thead>
+        <tr>
+          <td colspan="2" class="center nowrap"><strong>WHERE</strong></td>
+        </tr>
+        </thead>
+        <tbody id="rename_to">
+        <tr>
+        <td width="58" class="nowrap">Operator</td>
+            <td width="102"><select name="erel_opt" id="erel_opt">
+                <option value="--" selected="selected"> -- </option>
+                    <option value="="> = </option>
+                    <option value="&gt;"> &gt; </option>
+                    <option value="&lt;"> &lt; </option>
+                    <option value="&gt;="> &gt;= </option>
+                    <option value="&lt;="> &lt;= </option>
+                    <option value="NOT"> NOT </option>
+                    <option value="IN"> IN </option>
+                    <option value="EXCEPT"> Except </option>
+                    <option value="NOT IN"> NOT IN </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        <td class="nowrap">Value/<br>subquery</td>
+            <td><textarea id="eQuery" value="" cols="18"></textarea>
+            </td>
+            </tr>
+         </tbody>
+        <tbody>
+        <tr>
+            <td colspan="2" class="center nowrap">
+                <input type="button" class="butt" name="Button" value="OK" onclick="edit(&#39;Where&#39;)">
+                <input type="button" class="butt" name="Button" value="Cancel" onclick="document.getElementById(&#39;query_where&#39;).style.display = &#39;none&#39;;">
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    <td class="frams6"></td>
+</tr>
+<tr>
+    <td class="frams4"><div class="bor"></div></td>
+    <td class="frams7"></td>
+    <td class="frams3"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<!-- cache images -->
+<img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/2leftarrow_m.png" width="0" height="0" alt=""><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/rightarrow1.png" width="0" height="0" alt=""><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/rightarrow2.png" width="0" height="0" alt=""><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/uparrow2_m.png" width="0" height="0" alt=""><div id="PMA_disable_floating_menubar"></div></div><div id="selflink" class="print_ignore"><a href="http://127.0.0.1/phpmyadmin/pmd_general.php?db=seldo&amp;table=&amp;server=1&amp;target=&amp;token=61fc54b4cc33165c220c552dde0fec2b" title="Open new phpMyAdmin window" target="_blank"><img src="./127.0.0.1 _ 127.0.0.1 _ seldo _ phpMyAdmin 4.2.7.1_files/dot.gif" title="Open new phpMyAdmin window" alt="Open new phpMyAdmin window" class="icon ic_window-new"></a></div></body></html>

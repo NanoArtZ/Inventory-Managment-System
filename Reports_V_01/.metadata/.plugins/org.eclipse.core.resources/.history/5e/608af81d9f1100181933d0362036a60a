@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProfitStatement" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ebb61d8b-b424-4927-9933-5b153d9466b6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="220" height="31" uuid="f656c454-687d-4642-81f8-82533e3baec6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="18" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Profit and Loss Statement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="50" height="30" uuid="e1aad1ea-3393-498e-aa85-6db75ab1f341"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="16"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="343" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="280" height="30" uuid="7dae1a58-64d2-4f5a-94f2-f81077d0e8a2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16"/>
+				</textElement>
+				<text><![CDATA[Sales Income]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="280" height="30" uuid="f2c3a39d-0656-4799-a832-479d12483724"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cost of goods Sold]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="280" height="30" uuid="e811dca3-2d10-47fe-8c8d-b98f438771cc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Openning Stock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="100" width="280" height="30" uuid="742dd2a8-04e0-4377-afd0-d608ccf1a061"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Purchases]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="130" width="280" height="30" uuid="55346464-50fc-4c2c-ab07-cb5a40de8209"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Purchases]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

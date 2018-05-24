@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProfitStatement" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ebb61d8b-b424-4927-9933-5b153d9466b6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="220" height="31" uuid="f656c454-687d-4642-81f8-82533e3baec6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="18" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Profit and Loss Statement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="4" width="50" height="30" uuid="e1aad1ea-3393-498e-aa85-6db75ab1f341"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="16"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="516" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="561" height="490" uuid="d0db78ed-f5c0-44ee-ad09-9c84e078466c"/>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+				<staticText>
+					<reportElement x="10" y="371" width="270" height="30" uuid="cdc7c466-0c6b-410e-960b-70f9ad3a98f7"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Profit Before Tax]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="431" width="270" height="30" uuid="ef3b05eb-5d47-4da3-8e64-9f4f63bc8d24"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Net Profit]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="341" width="270" height="30" uuid="47303957-d549-40e7-8e7c-942914cce614"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Other Expences]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="160" width="270" height="30" uuid="55346464-50fc-4c2c-ab07-cb5a40de8209"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[	Closing Stock]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="250" width="270" height="30" uuid="c5f326ff-5f62-4a2f-91a2-53506da41861"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Gross Profit]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="401" width="270" height="30" uuid="a0f61932-2c80-4a15-9de3-96d2220e90d1"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Tax]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="281" width="270" height="30" uuid="7904a9b2-1b5a-42bf-b0a6-be976879c80f"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Other Income]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="190" width="270" height="30" uuid="bb08c523-d06e-4466-b7ef-bccbc7c49ae8"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="220" width="270" height="30" uuid="7492c65e-902b-4e80-9db9-3deff4eff963"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="311" width="270" height="30" uuid="cbf5a29f-1815-4474-8eac-9f71a3dfe0a0"/>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="16" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="10" y="9" width="270" height="30" uuid="7dae1a58-64d2-4f5a-94f2-f81077d0e8a2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16"/>
+				</textElement>
+				<text><![CDATA[Sales Income]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="39" width="270" height="30" uuid="f2c3a39d-0656-4799-a832-479d12483724"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cost of goods Sold]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="69" width="270" height="30" uuid="e811dca3-2d10-47fe-8c8d-b98f438771cc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	Openning Stock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="99" width="270" height="30" uuid="742dd2a8-04e0-4377-afd0-d608ccf1a061"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	Purchases]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="280" y="9" width="280" height="422" uuid="bcd7c2d1-145e-4ba3-b39b-f0f70f35c0e6">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<line>
+					<reportElement x="0" y="211" width="279" height="1" uuid="e128b74e-a310-4550-9d8b-700522b7ac23"/>
+				</line>
+				<line>
+					<reportElement x="146" y="-1" width="1" height="423" uuid="7132f83d-7d9e-48f6-8daf-e19c66dd0d96"/>
+				</line>
+				<line>
+					<reportElement x="-1" y="120" width="146" height="1" uuid="b856ec61-eef5-461a-b775-9a869b225685"/>
+				</line>
+				<line>
+					<reportElement x="146" y="301" width="134" height="1" uuid="9cb5957f-cea1-49c5-a43f-acc3021cbca1"/>
+				</line>
+				<line>
+					<reportElement x="147" y="362" width="134" height="1" uuid="ae4b1fde-335c-4f5e-9fd4-38bf5a85d59b"/>
+				</line>
+				<line>
+					<reportElement x="146" y="391" width="134" height="1" uuid="e28bbbda-4d5f-44d3-894e-01d8996639d5"/>
+				</line>
+				<line>
+					<reportElement x="-1" y="151" width="146" height="1" uuid="485655dd-5fe5-4cd5-a4f1-c13c376035f1"/>
+				</line>
+			</frame>
+			<staticText>
+				<reportElement x="10" y="129" width="270" height="31" uuid="a8481672-9043-4bdd-80db-fb2765bc277f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
