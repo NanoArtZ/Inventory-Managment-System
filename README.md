@@ -6,7 +6,7 @@ Database - Mysql - Xampp
 
 Importing Netbeans Project.
 
-  Go to the Netbeans IDE , then go to the open project and choose project. then you can open it.
+  Go to the Netbeans IDE , then go to the open project and choose project.Open it.
 Resolving Problems
   During the openning project net beans will detect missing jar files. For that you have to choose 
   jar files using resolving problems option in netbeans IDE.
