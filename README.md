@@ -4,7 +4,8 @@ Language - Java
 IDE - Netbeans 8.2
 Database - Mysql - Xampp
 
-Importing Netbeans Project
+Importing Netbeans Project.
+
   Go to the Netbeans IDE , then go to the open project and choose project. then you can open it.
 Resolving Problems
   During the openning project net beans will detect missing jar files. For that you have to choose 
